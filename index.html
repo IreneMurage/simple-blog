@@ -1,11 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog-Post</title>
+  <meta charset="UTF-8" />
+  <title>Blog Manager</title>
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-    
+  <h1>📝 Blog Manager</h1>
+
+  <div id="container">
+    <div id="post-list">
+      <h2>Posts</h2>
+    </div>
+
+    <div id="post-detail">
+      <h2>Post Details</h2>
+    </div>
+  </div>
+
+  <h3>Add New Post</h3>
+  <form id="new-post-form">
+    <input type="text" name="title" placeholder="Title" required /><br />
+    <textarea name="content" placeholder="Content" required></textarea><br />
+    <input type="text" name="author" placeholder="Author" required /><br />
+    <input type="text" name="image" placeholder="Image URL (optional)" /><br />
+    <button type="submit">Add</button>
+  </form>
+
+  <form id="edit-post-form" class="hidden">
+    <h4>Edit Post</h4>
+    <input type="text" name="image" placeholder="Image URL (optional)" />
+    <textarea id="edit-content" rows="4" placeholder="Edit Content"></textarea><br />
+    <button type="submit">Update</button>
+    <button type="button" id="cancel-edit">Cancel</button>
+  </form>
+
+  <script src="src/index.js"></script>
 </body>
 </html>
